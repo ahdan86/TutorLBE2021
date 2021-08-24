@@ -37,6 +37,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 
 7. Tambahkan Component BoxCollider2D pada GameObject Ball
 ![image](https://user-images.githubusercontent.com/58657135/130583278-922e9eca-88ba-4a5f-ba83-67ccdbe802f8.png)
+
 - `BoxCollider2D` adalah Component yang berfungsi untuk menetapkan batas bagaimana sebuah objek 2D dapat "bertabrakan"/Berinteraksi dengan objek lain (terdapat collider dengan bentuk shape yang lain)
 
 
