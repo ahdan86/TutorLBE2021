@@ -57,7 +57,27 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 - 'Angular Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
 - `Gravity Scale` sesuai namanya adalah gaya gravitasi yang bekerja. 0 berarti tidak ada gaya gravitasi (ke bawah) yang bekerja.
 
-10. Lalu duplicate GameObject `Player Paddle` (bisa menggunakan Ctrl + D) dan ganti nama duplicate tersebut menjadi `Computer Paddle`.
+10. Lalu duplicate GameObject `Player Paddle` (bisa menggunakan Ctrl + D), ganti nama duplicate tersebut menjadi `Computer Paddle`, dan ganti transform object menjadi berikut:
+
+![image](https://user-images.githubusercontent.com/58657135/131242713-982dc3a8-2e38-4237-a011-7b33ff104fa8.png)
+
+11. Buat 4 wall sebagai pembatas dari objek bola dengan membuat Empty GameObject dan dipasang dengan component `RigidBody2D`:
+
+![image](https://user-images.githubusercontent.com/58657135/131242784-6ff91813-db30-4e04-8cdb-a25af97fd124.png)
+
+sehingga di hierarchy tercipta object seperti berikut:
+
+![image](https://user-images.githubusercontent.com/58657135/131242929-2a09d4bc-daa8-4fd5-8838-69909b5be880.png)
+
+ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan seperti berikut:
+
+![image](https://user-images.githubusercontent.com/58657135/131243028-f8a709c1-88f5-4130-aed7-ce99d9b96263.png)
+![image](https://user-images.githubusercontent.com/58657135/131243035-ba65a959-3e28-4720-baee-60307c6c8e02.png)
+![image](https://user-images.githubusercontent.com/58657135/131243045-921f3cfa-a154-43ba-9042-22198c139b4e.png)
+![image](https://user-images.githubusercontent.com/58657135/131243053-f9f8bf8f-08a5-48fd-8d1f-5d45d7409d24.png)
+
+
+
 
 ## F. Penambahan Kecepatan Bola
 
