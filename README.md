@@ -19,7 +19,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 ![image](https://user-images.githubusercontent.com/58657135/130573050-388c3642-9535-4312-a185-bbaed2f1b9b4.png)
 
 2. Pertama ubah background color dari camera menjadi hitam (Select camera lalu ubah background color dari inspector)
-![image](https://user-images.githubusercontent.com/58657135/130573289-a2fca422-5229-44f0-aeed-f2eacb31eced.png)
+![image](https://user-images.githubusercontent.com/58657135/130573289-a2fca422-5229-44f0-aeed-f2eacb31eced.png | width=100)
 
 3. Lalu buat GameObject ball (dengan klik kanan pada `Hierarchy` dan mengikuti seperti di gambar)
 ![image](https://user-images.githubusercontent.com/58657135/130574002-dee3ea20-141e-4428-8b81-eb5711259cfb.png)
