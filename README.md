@@ -105,6 +105,42 @@ public class Paddle : MonoBehaviour
 
 Script diatas berfungsi untuk mendapatkan value dari component RigidBody2D dari Object dan set atribute speed (digunakan nanti) dari masing-masing paddle.
 
+3. Lalu kita pasangkan script `PlayerPaddle.cs` ke GameObject `PlayerPaddle` dan modifikasi script didalamnya menjadi seperti berikut:
+
+```cs
+public class PlayerPaddle : Paddle
+{
+    private Vector2 _direction;
+
+    private void Update(){
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
+            _direction = Vector2.up;
+        }
+        else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)){
+            _direction = Vector2.down;
+        } else{
+            _direction = Vector2.zero;
+        }
+    }
+
+    private void FixedUpdate(){
+        if(_direction.sqrMagnitude != 0){
+            _rigidBody.AddForce(_direction * this.speed);
+        }
+    }
+}
+```
+`public class PlayerPaddle : Paddle` menandakan script tersebut menurunkan sifat/inheritance dari class/script `Paddle.cs` 
+- Fungsi `Update()` akan bekerja setiap frame dalam game tersebut. Sehingga setiap perubahan seperti movement dsb bisa ditaruh pada fungsi ini.
+- Fungsi `FixedUpdate()` akan bekerja taip satuan waktu (bukan frame). Fungsi ini sangat berguna jika menerapkan perubahan yang terkait dengan Physics.
+
+4. Sekarang coba tekan play dan coba gerakkan paddle yang telah dipasang scriptnya.
+
+![image](https://user-images.githubusercontent.com/58657135/131245010-ca8d19c1-94d1-4098-9968-78b459fb86b2.png)
+
+## D. Ball Movement
+
+
 
 ## F. Penambahan Kecepatan Bola
 
