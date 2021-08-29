@@ -134,12 +134,75 @@ public class PlayerPaddle : Paddle
 - Fungsi `Update()` akan bekerja setiap frame dalam game tersebut. Sehingga setiap perubahan seperti movement dsb bisa ditaruh pada fungsi ini.
 - Fungsi `FixedUpdate()` akan bekerja taip satuan waktu (bukan frame). Fungsi ini sangat berguna jika menerapkan perubahan yang terkait dengan Physics.
 
-4. Sekarang coba tekan play dan coba gerakkan paddle yang telah dipasang scriptnya.
+4.Attribute speed karena bersifat `public` maka value nya bisa diatur dari Unity:
+
+![image](https://user-images.githubusercontent.com/58657135/131245590-e42e3d06-7733-4f4b-8804-c1168c395486.png)
+
+5. Sekarang coba tekan play dan coba gerakkan paddle yang telah dipasang scriptnya.
 
 ![image](https://user-images.githubusercontent.com/58657135/131245010-ca8d19c1-94d1-4098-9968-78b459fb86b2.png)
 
 ## D. Ball Movement
 
+Nah kita tau kalau game dari pong sendiri itu untuk bolanya sendiri pergerakan nya random (kickoff-nya) sehingga kita akan modifikasi script dari ball seperti berikut:
+
+1. 
+```cs
+public class Ball : MonoBehaviour
+{
+    public float speed = 200.0f;
+    private Rigidbody2D _rigidBody;
+
+    private void Awake(){
+        _rigidBody = GetComponent<Rigidbody2D>();
+    }
+    private void Start()
+    {
+        AddStartingForce();
+    }
+
+    private void AddStartingForce()
+    {
+        float x = Random.value < 0.5f ? -1.0f : 1.0f;
+        float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);
+
+        Vector2 direction = new Vector2(x ,y);
+        _rigidBody.AddForce(direction * this.speed);
+    }
+}
+```
+- Fungsi `Start()` akan dijalankan sama seperti `Awake()` akan dijalankan tepat sekali saat lifetime dari script tersebut namun Fungsi `Awake()` dijalankan tidak peduli script tersebut aktif atau tidak. Sedangkan `Start()` bisa saja tidak dijalankan satu frame dengan `Awake()` karena bisa saja script sedang disabled.
+
+Pada script diatas saat script dijalankan, Fungsi `AddStartingForce()` akan berjalan. Pada fungsi `AddStartingForce()` direction dari ball akan dirandom (Masih ingat ternary operator ?). 
+
+Pada dasarnya line `float x = Random.value < 0.5f ? -1.0f : 1.0f;` berarti: ambil random value, jika value tersebut dibawah 0.5 maka direction x akan bernilai -1, jika tidak maka direction x akan bernilai 1. (Untuk random bola bergerak ke arah kiri atau kanan).
+
+Pada line `float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);` berarti: ambil random value, jika value tersebut dibawah 0.5 maka akan diambil nilai random antar -1 hingga -0.5. Jika tidak, maka diambil random value dari 0.5 hingga 1. (Untuk random angle dari bola).
+
+2. Lalu masukkan value yang didapatkan kedalam variable bertipe `Vector2D` dan kita `AddForce` untuk menggerakkan bola dengan direction yang didapatkan dan speed yang telah ditentukan.
+
+3. Cek apakah bola bergerak dalam Play Mode.
+
+![image](https://user-images.githubusercontent.com/58657135/131246381-48aa9918-1003-4b95-8c70-d35544c1f1a4.png)
+
+
+Namun karena belum ditambahkan bouncy material sehingga bola saat collision dengan GameObject tidak memantul.
+
+1. Pertama tambahkan PhysicsMaterial2D pada tab Project:
+
+![image](https://user-images.githubusercontent.com/58657135/131246582-cd506c7b-3b83-4016-b837-fa4c42e428c7.png)
+
+2. Ubah value dari material menjadi seperti ini:
+
+![image](https://user-images.githubusercontent.com/58657135/131246642-f18b0af8-2bcb-4dd2-ac92-f810b23422da.png)
+
+3. Pasang Material tadi ke RigidBody2D pada GameObject ball dengan drag material tadi ke Properties Material:
+
+![image](https://user-images.githubusercontent.com/58657135/131246757-daa1a975-5ed3-40b1-af1d-df9330cb5353.png)
+
+4. Cek pergerakan bola dengan Play Mode.
+
+## E. Computer Paddle
 
 
 ## F. Penambahan Kecepatan Bola
