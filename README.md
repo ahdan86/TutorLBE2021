@@ -76,7 +76,34 @@ ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan
 ![image](https://user-images.githubusercontent.com/58657135/131243045-921f3cfa-a154-43ba-9042-22198c139b4e.png)
 ![image](https://user-images.githubusercontent.com/58657135/131243053-f9f8bf8f-08a5-48fd-8d1f-5d45d7409d24.png)
 
+## C. Player Paddle
 
+Agar game Pong ini dapat digerakkan dan dimainkan tentunya kita butuh coding setiap GameObject yang diperlukan.
+
+1. Buat 3 Script yang bernama `Paddle.cs`, `Player Paddle.cs`, 'Computer Paddle.cs`
+
+![image](https://user-images.githubusercontent.com/58657135/131243864-6ff911a1-6b18-4c73-a024-45d4e3a89026.png)
+
+2. Karena object `Player Paddle` dan 'Computer Paddle`mempunyai karakteristik yang sama yaitu pada game ini adalah kecepatan dari paddle dan adanya component `RigidBody2D` yang akan diakses oleh script pada kedua objek, maka kita buat satu class/script parent bernama `Paddle.cs` yang fungsinya akan inherit karakteristik yang sama tersebut ke kedua class yang mungkin saja memiliki method yang berbeda. 
+
+![image](https://user-images.githubusercontent.com/58657135/131244464-f6092c2a-9ec1-4f45-b799-5d2b34066868.png)
+
+Prinsip inheritance akan dipakai dalam konsep Pemrograman berbasis objek. Pertama tulis script berikut ke class/script `Paddle.cs`:
+
+```cs
+public class Paddle : MonoBehaviour
+{
+    public float speed = 10.0f;
+    protected Rigidbody2D _rigidBody; 
+
+    private void Awake(){
+        _rigidBody = GetComponent<Rigidbody2D>();
+    }
+}
+```
+- Fungsi `Awake()`berjalan saat scene dijalankan atau saat GameObject aktif (once during the lifetime of the script instance).
+
+Script diatas berfungsi untuk mendapatkan value dari component RigidBody2D dari Object dan set atribute speed (digunakan nanti) dari masing-masing paddle.
 
 
 ## F. Penambahan Kecepatan Bola
