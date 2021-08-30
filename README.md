@@ -112,7 +112,7 @@ Nah kita tau bahwa game Pong mempunyai garis tengah yang membagi daerah kita den
 
 Agar game Pong ini dapat digerakkan dan dimainkan tentunya kita butuh coding setiap GameObject yang diperlukan.
 
-1. Buat 3 Script yang bernama `Paddle.cs`, `Player Paddle.cs`, `Computer Paddle.cs`
+1. Buat 3 Script yang bernama `Paddle.cs`, `PlayerPaddle.cs`, `ComputerPaddle.cs`
 
 ![image](https://user-images.githubusercontent.com/58657135/131243864-6ff911a1-6b18-4c73-a024-45d4e3a89026.png)
 
