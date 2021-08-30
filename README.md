@@ -15,7 +15,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 3. Pilih Template 2D untuk membuat game 2D dan isi **Project Name** untuk Nama Project Game yang ingin dibuat dan **Location** untuk lokasi project yang akan ditempatkan.
 
 ## B. Setting Up Scene
-1. Pada tampilan awal terdapat panel `Hierarchy`, `SceneView`, `Gameiew`, `Inspector` dsb yang nanti akan dijelaskan sambil jalannya tutorial.
+1. Pada tampilan awal terdapat panel `Hierarchy`, `SceneView`, `GameView`, `Inspector` dsb yang nanti akan dijelaskan sambil jalannya tutorial.
 
 ![image](https://user-images.githubusercontent.com/58657135/130573050-388c3642-9535-4312-a185-bbaed2f1b9b4.png)
 
