@@ -204,6 +204,44 @@ Namun karena belum ditambahkan bouncy material sehingga bola saat collision deng
 
 ## E. Computer Paddle
 
+Nah agar game pong yang kita buat lebih menantang, maka kita bisa menambahkan script pada GameObject Computer Paddle agar dapat bergerak sendiri
+
+1. Pasang script `ComputerPaddle.cs` pada GameObject Computer Paddle
+2. Modifikasi script pada `ComputerPaddle.cs` menjadi seperti berikut:
+```cs
+public class ComputerPaddle : Paddle
+{
+    public Rigidbody2D ball;
+    private void FixedUpdate()
+    {
+        //Jika Bola ke arah computer paddle
+        if(this.ball.velocity.x > 0.0f){
+            //JIka Bola di atas computer paddle
+            if(this.ball.position.y > this.transform.position.y){
+                _rigidBody.AddForce(Vector2.up * this.speed);
+            }
+            //JIka Bola di bawah computer paddle
+            else if(this.ball.position.y < this.transform.position.y){
+                _rigidBody.AddForce(Vector2.down * this.speed);
+            }
+        }
+        else{
+           //Kode dibawah akan memposisikan computer paddle ke tengah
+           if(this.transform.position.y > 0.0f){
+               _rigidBody.AddForce(Vector2.down * this.speed);
+           } 
+           else if(this.transform.position.y < 0.0f){
+               _rigidBody.AddForce(Vector2.up * this.speed);
+           }
+        }
+    }
+}
+```
+3. Pasang GameObject Ball pada script ComputerPaddle (dengan drag GameObject ball ke component script Computer Paddle atau bisa select langsung)
+
+![image](https://user-images.githubusercontent.com/58657135/131271966-8488f0b5-f419-4094-809f-acb17fe80d28.png)
+
+4. Test pergerakan Computer Paddle dengan Play Mode
 
 ## F. Penambahan Kecepatan Bola
 
