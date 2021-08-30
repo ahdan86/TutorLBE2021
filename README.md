@@ -60,7 +60,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umumnya dibed
 
 ![image](https://user-images.githubusercontent.com/58657135/131241316-22648d45-fb66-411e-b833-c3f39fb26fd7.png)
 - `Mass` berfungsi sebagai massa dari suatu rigidbody yang menempel pada GameObject.
-- `Angular Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
+- `Linear Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
 - `Gravity Scale` sesuai namanya adalah gaya gravitasi yang bekerja. 0 berarti tidak ada gaya gravitasi (ke bawah) yang bekerja.
 
 10. Tambahkan juga Component `BoxCollider2D` pada `PlayerPaddle`.
