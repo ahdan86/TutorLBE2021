@@ -309,7 +309,7 @@ FYI : `OnCollisionEnter2D` hanya dapat ditrigger oleh object yang memiliki `Phys
 
 4. Karena tujuan kita menambahkan `OnCollisionEnter2D` adalah untuk mempercepat bola. Maka kita akan menambahkan force atau gaya pada bola tersebut saat bola tersebut menabrak dinding.
 
-Lalu lengkapi class BounceSurface dengan script berikut ini.
+Lalu lengkapi class BounceSurface menjadi script berikut ini.
 
 ```cs
 public class BounceSurface : MonoBehaviour {
