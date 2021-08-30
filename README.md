@@ -50,18 +50,20 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umumnya dibed
 
 ![image](https://user-images.githubusercontent.com/58657135/131241219-9ee7297b-8e2c-48b8-98f8-a6a622bacc10.png)
 
-9. Add Component RigidBody2D pada GameObject `PlayerPaddle` dan atur value pada component sebagai berikut:
+9. Add Component `RigidBody2D` pada GameObject `PlayerPaddle` dan atur value pada component sebagai berikut:
 
 ![image](https://user-images.githubusercontent.com/58657135/131241316-22648d45-fb66-411e-b833-c3f39fb26fd7.png)
 - `Mass` berfungsi sebagai massa dari suatu rigidbody yang menempel pada GameObject.
 - `Angular Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
 - `Gravity Scale` sesuai namanya adalah gaya gravitasi yang bekerja. 0 berarti tidak ada gaya gravitasi (ke bawah) yang bekerja.
 
-10. Lalu duplicate GameObject `Player Paddle` (bisa menggunakan Ctrl + D), ganti nama duplicate tersebut menjadi `Computer Paddle`, dan ganti transform object menjadi berikut:
+10. Tambahkan juga Component `BoxCollider2D` pada `PlayerPaddle`.
+
+11. Lalu duplicate GameObject `Player Paddle` (bisa menggunakan Ctrl + D), ganti nama duplicate tersebut menjadi `Computer Paddle`, dan ganti transform object menjadi berikut:
 
 ![image](https://user-images.githubusercontent.com/58657135/131242713-982dc3a8-2e38-4237-a011-7b33ff104fa8.png)
 
-11. Buat 4 wall sebagai pembatas dari objek bola dengan membuat Empty GameObject dan dipasang dengan component `Box Collider 2D`:
+12. Buat 4 wall sebagai pembatas dari objek bola dengan membuat Empty GameObject dan dipasang dengan component `Box Collider 2D`:
 
 ![image](https://user-images.githubusercontent.com/58657135/131242784-6ff91813-db30-4e04-8cdb-a25af97fd124.png)
 
