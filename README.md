@@ -76,6 +76,38 @@ ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan
 ![image](https://user-images.githubusercontent.com/58657135/131243045-921f3cfa-a154-43ba-9042-22198c139b4e.png)
 ![image](https://user-images.githubusercontent.com/58657135/131243053-f9f8bf8f-08a5-48fd-8d1f-5d45d7409d24.png)
 
+Nah kita tau bahwa game Pong mempunyai garis tengah yang membagi daerah kita dengan daerah musuh
+
+1. Pertama download `HalfSquare.jpg` dari repository ini.
+2. Taruh file `HalfSquare.jpg` ke dalam folder assets unity yang sedang dikerjakan dan ganti Wrap Mode dan Filter Mode pada Inspector menjadi seperti berikut:
+
+![image](https://user-images.githubusercontent.com/58657135/131289790-5a845d69-3133-4ead-a601-4077550f6053.png)
+
+4. Buat Empty GameObject lau namai dengan `Line`
+
+![image](https://user-images.githubusercontent.com/58657135/131288777-ef3960ce-fd6d-40bf-b955-70ca1c17d3d1.png)
+
+4. Tambahkan component Line Renderer pada objek Line dan modifikasi properties menjadi seperti berikut:
+
+![image](https://user-images.githubusercontent.com/58657135/131289063-7c594bbf-4196-4b19-841e-dab174f42785.png)
+
+5. Buat material baru dan ubah shadernya menjadi Unlit/Transparent
+
+![image](https://user-images.githubusercontent.com/58657135/131289358-2dc76d6b-401e-41a4-afeb-3b21312c6f3c.png)
+
+6. Tambahkan Texture pada material (klik select yang ada di kotak paling kanan) dan pilih `HalfSquare.jpg`
+
+![image](https://user-images.githubusercontent.com/58657135/131289921-96745112-331d-4915-a005-6c425bf2df06.png)
+
+7. Lalu di LineRenderer pad objek Line pilih material yang telah kita setting tadi
+
+![image](https://user-images.githubusercontent.com/58657135/131290178-69eff271-6e12-4f03-a737-f62c8c850203.png)
+
+8. Sehingga tampilannya akan menjadi seperti ini
+
+![image](https://user-images.githubusercontent.com/58657135/131290226-577307ea-515c-4260-878d-9e5b757a8f57.png)
+
+
 ## C. Player Paddle
 
 Agar game Pong ini dapat digerakkan dan dimainkan tentunya kita butuh coding setiap GameObject yang diperlukan.
