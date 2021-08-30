@@ -83,7 +83,7 @@ Nah kita tau bahwa game Pong mempunyai garis tengah yang membagi daerah kita den
 
 ![image](https://user-images.githubusercontent.com/58657135/131289790-5a845d69-3133-4ead-a601-4077550f6053.png)
 
-4. Buat Empty GameObject lau namai dengan `Line`
+4. Buat Empty GameObject lalu ganti namanya menjadi `Line`
 
 ![image](https://user-images.githubusercontent.com/58657135/131288777-ef3960ce-fd6d-40bf-b955-70ca1c17d3d1.png)
 
