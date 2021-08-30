@@ -176,7 +176,8 @@ public class PlayerPaddle : Paddle
 
 ## D. Ball Movement
 
-Nah kita tau kalau game dari pong sendiri itu untuk bolanya sendiri pergerakan nya random (kickoff-nya) sehingga kita akan modifikasi script dari ball seperti berikut:
+Nah kita tau kalau game dari pong sendiri itu untuk bolanya sendiri pergerakan nya random (kickoff-nya).
+Pertama buat script `Ball.cs` lalu pasangkan component script `Ball` tersebut pada `GameObject` `Ball`. Kemudian kita akan modifikasi script `Ball` menjadi berikut:
 
 1. 
 ```cs
