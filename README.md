@@ -668,7 +668,19 @@ private void Update()
 
 Selamat game Pong telah berhasil dibuat.
 
+## K. Saran untuk FP
 
+Jika kalian ingin melanjutkan FP dari project ini (kalo mau bikin project lain boleh aja sih :D ) mungkin ini saran-saran dari kami:
+- Membuat map baru untuk pong (obstacle)
+- Membuat gamenya menjadi 2 player (kontrol W, S) dan (kontrol Up,Down)
+- Koin yang jika kena bakal nambah score
+- Menambahkan Main Menu dan Pause Menu (bisa juga di Main Menu opsi vsBot atau PvP)
+- Tamabahin Sound Effect
+- dsb
+
+## Referensi
+- [How to make Pong in Unity 🏓💥](https://www.youtube.com/watch?v=AcpaYq0ihaM&ab_channel=Zigurous)
+- [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
 
 
   
