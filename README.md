@@ -344,7 +344,7 @@ public class Ball : MonoBehaviour {
 
     public void AddForce(Vector2 force)
     {
-        this.rigidbody.AddForce(force);
+        _rigidBody.AddForce(force);
     }
 }
 ```
