@@ -61,15 +61,15 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umumnya dibed
 
 ![image](https://user-images.githubusercontent.com/58657135/131242713-982dc3a8-2e38-4237-a011-7b33ff104fa8.png)
 
-11. Buat 4 wall sebagai pembatas dari objek bola dengan membuat Empty GameObject dan dipasang dengan component `RigidBody2D`:
+11. Buat 4 wall sebagai pembatas dari objek bola dengan membuat Empty GameObject dan dipasang dengan component `Box Collider 2D`:
 
 ![image](https://user-images.githubusercontent.com/58657135/131242784-6ff91813-db30-4e04-8cdb-a25af97fd124.png)
 
-sehingga di hierarchy tercipta object seperti berikut:
+Sehingga di hierarchy tercipta object seperti berikut:
 
 ![image](https://user-images.githubusercontent.com/58657135/131242929-2a09d4bc-daa8-4fd5-8838-69909b5be880.png)
 
-ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan seperti berikut:
+Ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan seperti berikut (samakan dengan component `Box Collider 2D` di inspector sebelah kanan):
 
 ![image](https://user-images.githubusercontent.com/58657135/131243028-f8a709c1-88f5-4130-aed7-ce99d9b96263.png)
 ![image](https://user-images.githubusercontent.com/58657135/131243035-ba65a959-3e28-4720-baee-60307c6c8e02.png)
