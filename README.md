@@ -420,8 +420,8 @@ public class Ball : MonoBehaviour {
 
     public void ResetPosition()
     {
-        rigidbody.velocity = Vector2.zero;
-        rigidbody.position = Vector2.zero;
+        _rigidBody.velocity = Vector2.zero;
+        _rigidBody.position = Vector2.zero;
     }
 }
 ```
@@ -432,8 +432,8 @@ public class Ball : MonoBehaviour {
 public class Paddle : MonoBehaviour {
     public void ResetPosition()
     {
-        rigidbody.velocity = Vector2.zero;
-        rigidbody.position = new Vector2(rigidbody.position.x, 0.0f);
+        _rigidBody.velocity = Vector2.zero;
+        _rigidBody.position = new Vector2(_rigidBody.position.x, 0.0f);
     }
 }
 ```
