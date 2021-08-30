@@ -4,6 +4,8 @@
 ## Preface
 Asset yang digunakan pada game ada pada folder `Assets` pada Repository ini. Meskipun tanpa menggunakan `Assets` juga masih dapat mengikuti step - step nya.
 
+Kalian juga boleh clone Repository ini buat download Project Unity nya. Project Unity ada di folder `PongProject`. Setelah di download bisa langusng di buka di Unity Editor kalian.
+
 ## Pengertian Game Engine
 Unity adalah cross-platform game engine dimana Unity adalah berfungsi sebagai aplikasi "editor" untuk pengembangan game (Semacam halnya Photoshop adalah aplikasi editor untuk manipulasi gambar).
 
