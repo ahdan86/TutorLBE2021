@@ -430,6 +430,11 @@ public class Ball : MonoBehaviour {
 
 ```cs
 public class Paddle : MonoBehaviour {
+
+    /*
+        Code lain
+    */
+
     public void ResetPosition()
     {
         _rigidBody.velocity = Vector2.zero;
