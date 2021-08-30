@@ -69,7 +69,7 @@ Sehingga di hierarchy tercipta object seperti berikut:
 
 ![image](https://user-images.githubusercontent.com/58657135/131242929-2a09d4bc-daa8-4fd5-8838-69909b5be880.png)
 
-Ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan seperti berikut (samakan dengan component `Box Collider 2D` di inspector sebelah kanan):
+Ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan seperti berikut (samakan dengan component `Transform` dan `Box Collider 2D` di inspector sebelah kanan):
 
 ![image](https://user-images.githubusercontent.com/58657135/131243028-f8a709c1-88f5-4130-aed7-ce99d9b96263.png)
 ![image](https://user-images.githubusercontent.com/58657135/131243035-ba65a959-3e28-4720-baee-60307c6c8e02.png)
