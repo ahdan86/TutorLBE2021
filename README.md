@@ -1,5 +1,9 @@
 # TutorLBE2021
 ![image](https://user-images.githubusercontent.com/58657135/130463087-3488f01c-ef9f-4dc5-8f07-8241392327f2.png)
+
+## Preface
+Asset yang digunakan pada game ada pada folder `Assets` pada Repository ini. Meskipun tanpa menggunakan `Assets` juga masih dapat mengikuti step - step nya.
+
 ## Pengertian Game Engine
 Unity adalah cross-platform game engine dimana Unity adalah berfungsi sebagai aplikasi "editor" untuk pengembangan game (Semacam halnya Photoshop adalah aplikasi editor untuk manipulasi gambar).
 
@@ -679,12 +683,13 @@ Selamat game Pong telah berhasil dibuat.
 ## K. Saran untuk FP
 
 Jika kalian ingin melanjutkan FP dari project ini (kalo mau bikin project lain boleh aja sih :D ) mungkin ini saran-saran dari kami:
-- Membuat map baru untuk pong (obstacle)
-- Membuat gamenya menjadi 2 player (kontrol W, S) dan (kontrol Up,Down)
-- Koin yang jika kena bakal nambah score
-- Menambahkan Main Menu dan Pause Menu (bisa juga di Main Menu opsi vsBot atau PvP)
-- Tamabahin Sound Effect
-- dsb
+- Membuat map baru untuk pong (obstacle).
+- Membuat gamenya menjadi 2 player (kontrol W, S) dan (kontrol Up,Down).
+- Koin yang jika kena bakal nambah score.
+- Menambahkan Main Menu dan Pause Menu (bisa juga di Main Menu opsi vsBot atau PvP).
+- Tambahin Sound Effect.
+- Bot-nya terlalu OP, coba dilemahin dia h3h3.
+- etc.
 
 ## Referensi
 - [How to make Pong in Unity 🏓💥](https://www.youtube.com/watch?v=AcpaYq0ihaM&ab_channel=Zigurous)
