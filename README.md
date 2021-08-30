@@ -3,7 +3,7 @@
 ## Pengertian Game Engine
 Unity adalah cross-platform game engine dimana Unity adalah berfungsi sebagai aplikasi "editor" untuk pengembangan game (Semacam halnya Photoshop adalah aplikasi editor untuk manipulasi gambar).
 
-Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibedakan menjadi 2 yaitu Project 3D dan 2D. Dalam modul ini kita akan lebih lanjut membahas membuat game dalam Unity Project 2D.
+Dalam Unity, dikenal namanya "Unity Project". Unity project secara umumnya dibedakan menjadi 2 yaitu Project 3D dan 2D. Dalam modul ini kita akan lebih lanjut membahas membuat game dalam Unity Project 2D.
 
 ## A. Setting Up Project
 1. Buka Unity Hub yang telah di download.
@@ -21,14 +21,14 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 
 2. Pertama ubah background color dari camera menjadi hitam (Select camera lalu ubah background color dari inspector)
 
-![image](https://user-images.githubusercontent.com/58657135/130573289-a2fca422-5229-44f0-aeed-f2eacb31eced.png | width=100)
+![image](https://user-images.githubusercontent.com/58657135/130573289-a2fca422-5229-44f0-aeed-f2eacb31eced.png)
 
 3. Lalu buat GameObject ball (dengan klik kanan pada `Hierarchy` dan mengikuti seperti di gambar)
 
 ![image](https://user-images.githubusercontent.com/58657135/130574002-dee3ea20-141e-4428-8b81-eb5711259cfb.png)
 - `Hierarchy` atau `Hierarchy Window` mengandung dan menampilkan semua GameObject yang berhubungan dalam Scene yang sedang dikerjakan. GameObject seperti camera, lighting ,model 3D, dsb yang digunakan dalam Scene pasti akan tertampil dalam Hierarchy.
 
-4. Lalu kita akan tambahkan Component RigidBody2D pada GameObject Ball
+4. Lalu kita akan tambahkan Component RigidBody2D pada GameObject Ball.
 
 ![image](https://user-images.githubusercontent.com/58657135/130574322-02b52e8c-9386-464a-97e0-d6752925c9b3.png)
 - `Rigidbody2D` disini berfungsi untuk menerapkan hukum fisika pada GameObject yang kita pasang dan bisa memodifikasi value propertie seperti mass, drag, gravity, dsb pada object tersebut
@@ -41,7 +41,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 
 ![image](https://user-images.githubusercontent.com/58657135/130575520-8a7b4d2a-fc96-4de1-910e-6f8e5d71528f.png)
 
-7. Tambahkan Component BoxCollider2D pada GameObject Ball
+7. Tambahkan Component BoxCollider2D pada GameObject Ball.
 
 ![image](https://user-images.githubusercontent.com/58657135/130583278-922e9eca-88ba-4a5f-ba83-67ccdbe802f8.png)
 - `BoxCollider2D` adalah Component yang berfungsi untuk menetapkan batas bagaimana sebuah objek 2D dapat "bertabrakan"/Berinteraksi dengan objek lain (terdapat collider dengan bentuk shape yang lain)
@@ -54,7 +54,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umunya dibeda
 
 ![image](https://user-images.githubusercontent.com/58657135/131241316-22648d45-fb66-411e-b833-c3f39fb26fd7.png)
 - `Mass` berfungsi sebagai massa dari suatu rigidbody yang menempel pada GameObject.
-- 'Angular Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
+- `Angular Drag` berfungsi sebagai drag dari objek yang menyebabkan objek untuk <em>drag</em> yang apabila object tersebut diberi force/collision semakin besar drag maka semakin cepat object tersebut untuk <em>rest</em>.
 - `Gravity Scale` sesuai namanya adalah gaya gravitasi yang bekerja. 0 berarti tidak ada gaya gravitasi (ke bawah) yang bekerja.
 
 10. Lalu duplicate GameObject `Player Paddle` (bisa menggunakan Ctrl + D), ganti nama duplicate tersebut menjadi `Computer Paddle`, dan ganti transform object menjadi berikut:
@@ -80,11 +80,11 @@ ubahlah scale dari masing masing wall sehingga jika dilihat dari Scene View akan
 
 Agar game Pong ini dapat digerakkan dan dimainkan tentunya kita butuh coding setiap GameObject yang diperlukan.
 
-1. Buat 3 Script yang bernama `Paddle.cs`, `Player Paddle.cs`, 'Computer Paddle.cs`
+1. Buat 3 Script yang bernama `Paddle.cs`, `Player Paddle.cs`, `Computer Paddle.cs`
 
 ![image](https://user-images.githubusercontent.com/58657135/131243864-6ff911a1-6b18-4c73-a024-45d4e3a89026.png)
 
-2. Karena object `Player Paddle` dan 'Computer Paddle`mempunyai karakteristik yang sama yaitu pada game ini adalah kecepatan dari paddle dan adanya component `RigidBody2D` yang akan diakses oleh script pada kedua objek, maka kita buat satu class/script parent bernama `Paddle.cs` yang fungsinya akan inherit karakteristik yang sama tersebut ke kedua class yang mungkin saja memiliki method yang berbeda. 
+2. Karena object `Player Paddle` dan `Computer Paddle`mempunyai karakteristik yang sama yaitu pada game ini adalah kecepatan dari paddle dan adanya component `RigidBody2D` yang akan diakses oleh script pada kedua objek, maka kita buat satu class/script parent bernama `Paddle.cs` yang fungsinya akan inherit karakteristik yang sama tersebut ke kedua class yang mungkin saja memiliki method yang berbeda. 
 
 ![image](https://user-images.githubusercontent.com/58657135/131244464-f6092c2a-9ec1-4f45-b799-5d2b34066868.png)
 
@@ -132,7 +132,7 @@ public class PlayerPaddle : Paddle
 ```
 `public class PlayerPaddle : Paddle` menandakan script tersebut menurunkan sifat/inheritance dari class/script `Paddle.cs` 
 - Fungsi `Update()` akan bekerja setiap frame dalam game tersebut. Sehingga setiap perubahan seperti movement dsb bisa ditaruh pada fungsi ini.
-- Fungsi `FixedUpdate()` akan bekerja taip satuan waktu (bukan frame). Fungsi ini sangat berguna jika menerapkan perubahan yang terkait dengan Physics.
+- Fungsi `FixedUpdate()` akan bekerja tiap satuan waktu (bukan frame). Fungsi ini sangat berguna jika menerapkan perubahan yang terkait dengan Physics.
 
 4.Attribute speed karena bersifat `public` maka value nya bisa diatur dari Unity:
 
@@ -632,7 +632,7 @@ private void Update()
 
 3. Coba mainkan game dan tekan tombol `R`. Kalo berhasil maka score game akan tereset dan posisi kembali ke posisi semula.
 
-## J. Yay, nice
+## J. Uwu, nice
 
 Selamat game Pong telah berhasil dibuat.
 
