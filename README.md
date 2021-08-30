@@ -23,7 +23,7 @@ Dalam Unity, dikenal namanya "Unity Project". Unity project secara umumnya dibed
 
 ![image](https://user-images.githubusercontent.com/58657135/130573289-a2fca422-5229-44f0-aeed-f2eacb31eced.png)
 
-3. Lalu buat GameObject ball (dengan klik kanan pada `Hierarchy` dan mengikuti seperti di gambar)
+3. Lalu buat GameObject baru lalu ubah namanya menjadi `Ball` (dengan klik kanan pada `Hierarchy` dan mengikuti seperti di gambar)
 
 ![image](https://user-images.githubusercontent.com/58657135/130574002-dee3ea20-141e-4428-8b81-eb5711259cfb.png)
 - `Hierarchy` atau `Hierarchy Window` mengandung dan menampilkan semua GameObject yang berhubungan dalam Scene yang sedang dikerjakan. GameObject seperti camera, lighting ,model 3D, dsb yang digunakan dalam Scene pasti akan tertampil dalam Hierarchy.
